@@ -16,9 +16,9 @@ public class RansomwareService {
         this.repository = repository;
     }
 
-    public void importData() {
+    public void importData(int annee, int mois) {
 
-        String url = "https://api.ransomware.live/v2/victims/2026/01";
+        String url = "https://api.ransomware.live/v2/victims/" + annee +"/"+ mois;
 
         RansomwareVictimDto[] data =
                 restTemplate.getForObject(url, RansomwareVictimDto[].class);

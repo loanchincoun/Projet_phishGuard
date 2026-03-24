@@ -3,6 +3,7 @@ package fr.phishguard.model.entity;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "ransomwareVictim")
 public class RansomwareVictimEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
